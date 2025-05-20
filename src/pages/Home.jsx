@@ -4,7 +4,7 @@ function Home() {
   return (
     <main className="home">
       <section className="hero">
-        <h1>Hi, I'm Kaira 👋</h1>
+        <h1>Hi, I'm jessica-rita 👋</h1>
         <p>A creative developer building meaningful apps</p>
         <div className="hero-buttons">
           <a href="/projects" className="btn">View Projects</a>

@@ -3,6 +3,7 @@
   --accent: #6497b1;  /* deeper blue for highlights */
   --background: #f0f8ff;
   --text: #2e3c4e;
+  --font:  monospace;
 }
 
 * {
@@ -19,7 +20,7 @@ html, body {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font);
   background-color: var(--background);
   color: var(--text);
 }

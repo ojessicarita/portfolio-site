@@ -14,24 +14,45 @@ function App() {
     <BrowserRouter>
       <div
         className="app-container"
-        style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}
+        style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          minHeight: '100vh',
+          width: '100%',
+          overflowX: 'hidden'
+        }}
       >
         <Header />
+
+        <nav style={{ 
+          backgroundColor: '#8b9bb5',
+          padding: '1rem',
+          width: '100%',
+          textAlign: 'center',
+          marginBottom: '20px'
+        }}>
+          <div style={{ 
+            maxWidth: '1200px', 
+            margin: '0 auto',
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1rem'
+          }}>
+            <Link to="/" style={{ color: '#fff' }}>Home</Link>
+            <Link to="/about" style={{ color: '#fff' }}>About</Link>
+            <Link to="/projects" style={{ color: '#fff' }}>Projects</Link>
+            <Link to="/contact" style={{ color: '#fff' }}>Contact</Link>
+          </div>
+        </nav>
 
         <div style={{ 
           maxWidth: '1200px', 
           width: '100%', 
           margin: '0 auto', 
-          padding: '0 1rem' 
+          padding: '0 1rem',
+          boxSizing: 'border-box'
         }}>
-          <nav style={{ margin: '1rem auto', textAlign: 'center' }}>
-            <Link to="/" style={{ marginRight: '1rem' }}>Home</Link>
-            <Link to="/about" style={{ marginRight: '1rem' }}>About</Link>
-            <Link to="/projects" style={{ marginRight: '1rem' }}>Projects</Link>
-            <Link to="/contact">Contact</Link>
-          </nav>
-
-          <main style={{ flex: 1 }}>
+          <main style={{ flex: 1, width: '100%' }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
